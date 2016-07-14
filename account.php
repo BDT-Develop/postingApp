@@ -3,8 +3,6 @@ include("php/header.php");
 include_once("php/dbCredentials.php");
  ?>
 
-<div class="" id= "customerData">
-  <form class="" action="" method="">
 <?php
 
   $user = $_SESSION["user"];
@@ -21,7 +19,9 @@ include_once("php/dbCredentials.php");
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
-          echo "Username: " . $row["username"]. " - Nombre: " . $row["nombre"]. " " . $row["apellido"]. "<br> Correo Electronico: ".$row["correoElectronico"];
+          $username= $row["username"];
+          $nombreCompleto=$row["nombre"]." ".$row["apellido"];
+          $email=$row["correoElectronico"];
       }
   } else {
       echo "0 results";
@@ -29,6 +29,15 @@ include_once("php/dbCredentials.php");
   $conn->close();
 
  ?>
+
+ <div class="formi" id= "formInfo">
+   <form class="" action="" method="">
+     <input readonly type="text" name="username" <?php echo " value='Usuario: ".$username."'"; ?>>
+
+     <input readonly type="text" name="nombreCompleto" <?php echo " value='Nombre Completo: ".$nombreCompleto."'"; ?>>
+
+     <input readonly type="text" name="correoElectronico" <?php echo " value='Email: ".$email."'"; ?>>
+
     <a href="logout.php">Salir</a>
   </form>
 </div> <!--customerData>

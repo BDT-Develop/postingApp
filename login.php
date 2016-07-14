@@ -34,7 +34,7 @@ if(isset($_POST["email"])){
 }
  ?>
 
-<div id="logInForm" class="" action="login.php" method="post">
+<div id="logInForm" class="formi" action="login.php" method="post">
   <form class="" action="login.php" method="post">
     <input type="text" name="email" value="" placeholder="eMail">
 

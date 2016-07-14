@@ -34,7 +34,7 @@ if (isset($_POST["username"]) && isset($_POST["email"])) {
 else {
 }
   ?>
-  <div class="" id="regDiv">
+  <div class="formi" id="formregistro">
 
     <form class="" action="reg.php" method="post">
       <input type="text" name="firstname" value="" placeholder="Nombre">
