@@ -18,13 +18,14 @@ session_start();
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>TestOne</title>
   </head>
   <body>
 
     <div id=navbar>
       <ul>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php" class="active">Home</a></li>
         <li><a href="news.php">News</a></li>
         <?php echo $nav ?>
 

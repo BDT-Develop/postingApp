@@ -3,9 +3,9 @@ include("php/header.php");
 ?>
 
 <div id="container" class="">
-  <h1>Bienvenido a BDT</h1>
+  <h1>Bienvenido a STI y BDT Solutions</h1>
   <p>
-    En esta pagina podras comentar y aprender de forma integra.
+    En esta pagina podras ingresar un post con el motivo de visita a tu negocio.
   </p>
 
 </div><!--container-->

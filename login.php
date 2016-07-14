@@ -4,9 +4,9 @@ include_once("php/dbCredentials.php");
 ?>
 
 <?php
-if(isset($_POST["user"])){
+if(isset($_POST["email"])){
 
-    $email = $_POST["user"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
       // Crear conexion
     $conn = new mysqli(NOMBRE_HOST, USUARIO, CONTRASENA, BASE_DE_DATOS);
@@ -15,7 +15,7 @@ if(isset($_POST["user"])){
         die("Error de conexion: " . $conn->connect_error);
     }
 
-    $sql = "SELECT username, nombre, apellido, correoElectronico  FROM usuarios WHERE username = '$email' AND contrasenia = '$password' ";
+    $sql = "SELECT username, nombre, apellido, correoElectronico  FROM usuarios WHERE correoElectronico = '$email' AND contrasenia = '$password' ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -34,7 +34,7 @@ if(isset($_POST["user"])){
 }
  ?>
 
-<div id="logInForm" class="">
+<div id="logInForm" class="" action="login.php" method="post">
   <form class="" action="login.php" method="post">
     <input type="text" name="email" value="" placeholder="eMail">
 
