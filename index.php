@@ -1,5 +1,5 @@
 <?php
-include("php/header.php");
+include("php/com/header.php");
 ?>
 
 <div id="container" class="formi">
@@ -11,5 +11,5 @@ include("php/header.php");
 </div><!--container-->
 
 <?php
-include("php/footer.php");
+include("php/com/footer.php");
 ?>
