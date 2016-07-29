@@ -1,6 +1,6 @@
 <?php
-include("php/header.php");
-include_once("php/dbCredentials.php");
+include("php/com/header.php");
+include_once("php/sql/dbCredentials.php");
  ?>
 
 <?php
@@ -40,9 +40,12 @@ include_once("php/dbCredentials.php");
 
     <a href="logout.php">Salir</a>
   </form>
-</div> <!--customerData>
-
+</div> <!--customerData>-->
+<script type="text/javascript">
+$( "#linkhome" ).removeClass( "active" );
+$( "#linkuser" ).addClass( "active" );
+</script>
 
  <?php
-include("php/footer.php");
+include("php/com/footer.php");
   ?>
