@@ -15,6 +15,23 @@ contrasenia varchar(15),
 primary key(idUsuario)
 );
 
-SELECT * 
-FROM usuarios;
+CREATE TABLE posts
+(
+idPost int auto_increment,
+idUsuario int,
+mensaje text,
+estadoPost varchar(1),
+primary key(idPost),
+foreign key(idUsuario) references usuarios(idUsuario)
+);
 
+CREATE TABLE respuestas
+(
+idRespuesta int auto_increment,
+idPost int,
+idUsuario int,
+mensaje text,
+primary key(idRespuesta),
+foreign key(idUsuario) references usuarios(idUsuario),
+foreign key(idPost) references posts(idPost)
+);

@@ -2,4 +2,4 @@
 define("NOMBRE_HOST","localhost");
 define("BASE_DE_DATOS","testOne");
 define("USUARIO","root");
-define("CONTRASENA","Asispro2016");
+define("CONTRASENA","password");
