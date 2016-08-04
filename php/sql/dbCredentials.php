@@ -11,3 +11,12 @@ define("NOMBRE_HOST","107.178.209.115");
 define("BASE_DE_DATOS","testOne");
 define("USUARIO","root");
 define("CONTRASENA","bdtsystems");
+
+function queryNews($params){
+  $idUsuario = $params['idUsuario'];
+  $estadoPost = $params['estadoPost'];
+  $sql = "SELECT *
+          FROM posts
+          WHERE idUsuario = '$idUsuario';";
+
+}

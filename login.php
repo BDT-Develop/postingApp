@@ -15,13 +15,17 @@ if(isset($_POST["email"])){
         die("Error de conexion: " . $conn->connect_error);
     }
 
-    $sql = "SELECT username, nombre, apellido, correoElectronico  FROM usuarios WHERE correoElectronico = '$email' AND contrasenia = '$password' ";
+    $sql = "SELECT idUsuario, username, nombre, apellido, correoElectronico  FROM usuarios WHERE correoElectronico = '$email' AND contrasenia = '$password' ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
 
         while($row = $result->fetch_assoc()) {
+          $_SESSION["idUsuario"] =  $row["idUsuario"];
           $_SESSION["user"] =  $row["username"];
+          $_SESSION["name"] =  $row["nombre"];
+          $_SESSION["lastname"] =  $row["apellido"];
+          $_SESSION["email"] =  $row["correoElectronico"];
         }
           header("Location: index.php");
     } else {

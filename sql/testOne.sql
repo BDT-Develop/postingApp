@@ -19,6 +19,7 @@ CREATE TABLE posts
 (
 idPost int auto_increment,
 idUsuario int,
+titulo varchar(35),
 mensaje text,
 estadoPost varchar(1),
 primary key(idPost),
