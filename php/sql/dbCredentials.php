@@ -14,9 +14,8 @@ define("CONTRASENA","bdtsystems");
 
 function queryNews($params){
   $idUsuario = $params['idUsuario'];
-  $estadoPost = $params['estadoPost'];
   $sql = "SELECT *
           FROM posts
           WHERE idUsuario = '$idUsuario';";
-
+  return $sql;
 }

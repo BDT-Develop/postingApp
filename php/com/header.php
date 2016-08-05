@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 error_reporting(-1);
 session_start();
   if (isset($_SESSION["user"])) {

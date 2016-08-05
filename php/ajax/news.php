@@ -37,7 +37,6 @@ if ($result->num_rows > 0) {
               <input id='".$row['idPost']."' type='textbox' name='name' value='' readonly='true'>
               <input id='".$row['titulo']."' type='textbox' name='name' value='' readonly='true' readonly='true'>
               <input id='".$row['mensaje']."' type='textbox' name='name' value='' readonly='true' readonly='true'>
-              <input id='".$row['estadoPost']."' type='textbox' name='name' value='' readonly='true' readonly='true'>
             </form>
           </div>
         </div>";

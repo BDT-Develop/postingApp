@@ -5,8 +5,8 @@ $( "#linknews" ).addClass( "active" );
 /*Function to request querys[AJAX]*/
 $(document).ready(function(){
 $("#btnRefresh").click(function(){
-  var idUsuario = document.getElementById('idUsuario');
-  var username = document.getElementById('username');
+  var idUsuario = document.getElementById('idUsuario').value;
+  var username = document.getElementById('username').value;
   var parametros = {
     'idUsuario':idUsuario,
     'user':username
