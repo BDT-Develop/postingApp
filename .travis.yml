@@ -1,4 +1,5 @@
 languaje: php
+sudo: required
 php: 
 - 5.5
 script: phpunit index.php
