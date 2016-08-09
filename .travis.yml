@@ -1,0 +1,4 @@
+languaje: php
+php: 
+- 5.5
+script: phpunit index.php
